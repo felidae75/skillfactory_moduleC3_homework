@@ -30,23 +30,23 @@ ElectricalDevice.prototype.unplug = function () {
 }
 
 function Computer (name, power, type, ram, proc, vga) {
-    this.name = name
-    this.power = power
-    this.type = type
-    this.ram = ram
-    this.proc = proc
-    this.vga = vga
-    this.isPluggetIn = false
+    this.name = name;
+    this.power = power;
+    this.type = type;
+    this.ram = ram;
+    this.proc = proc;
+    this.vga = vga;
+    this.isPluggetIn = false;
 }
 
 Computer.prototype = new ElectricalDevice()
 
 function Monitor (name, power, brand, diagonal) {
-    this.name = name
-    this.power = power
-    this.brand = brand
-    this.diagonal = diagonal
-    this.isPluggetIn = true
+    this.name = name;
+    this.power = power;
+    this.brand = brand;
+    this.diagonal = diagonal;
+    this.isPluggetIn = true;
 }
 
 Monitor.prototype = new ElectricalDevice()

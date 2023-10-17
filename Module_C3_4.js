@@ -12,20 +12,20 @@ function ElectricalDevice (name, power) {
 // Включаем
 ElectricalDevice.prototype.plugIn = function () {
     if (this.isPluggetIn) {
-        console.log(`${this.name} уже был включён`)
+        console.log(`${this.name} уже был включён`);
     } else {
-        this.isPluggetIn = true
-        console.log(`${this.name} включён`)
+        this.isPluggetIn = true;
+        console.log(`${this.name} включён`);
     }
 }
 
 // Выключаем
 ElectricalDevice.prototype.unplug = function () {
     if (!this.isPluggetIn) {
-        console.log(`${this.name} уже был выключен`)
+        console.log(`${this.name} уже был выключен`);
     } else {
-        this.isPluggetIn = false
-        console.log(`${this.name} выключен`)
+        this.isPluggetIn = false;
+        console.log(`${this.name} выключен`);
     }
 }
 
@@ -39,7 +39,7 @@ function Computer (name, power, type, ram, proc, vga) {
     this.isPluggetIn = false;
 }
 
-Computer.prototype = new ElectricalDevice()
+Computer.prototype = new ElectricalDevice();
 
 function Monitor (name, power, brand, diagonal) {
     this.name = name;
@@ -49,21 +49,17 @@ function Monitor (name, power, brand, diagonal) {
     this.isPluggetIn = true;
 }
 
-Monitor.prototype = new ElectricalDevice()
+Monitor.prototype = new ElectricalDevice();
 
-const myComputer = new Computer("HomeComputer", 100, "stationary", 32, "Intel Dual Core", "GeForce 1080")
-const myMonitor = new Monitor("MyMonitor", 120, "ASUS", 27)
-
-console.log(myComputer, myMonitor)
+const myComputer = new Computer("Home", 100, "stationary", 32, "Intel Dual Core", "GeForce 1080");
+const myMonitor = new Monitor("MyMonitor", 120, "ASUS", 27);
 
 // Включаем всё
-myComputer.plugIn()
-myMonitor.plugIn()
-
-console.log(myComputer, myMonitor)
+myComputer.plugIn();
+myMonitor.plugIn();
 
 // Завершаем работу
-myComputer.unplug()
-myMonitor.unplug()
+myComputer.unplug();
+myMonitor.unplug();
 
 console.log(myComputer, myMonitor)
